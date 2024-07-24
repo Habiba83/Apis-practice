@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Movie App</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script src="https://kit.fontawesome.com/5a92832f3d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="my-side-nav h-100 position-fixed  d-flex">
+        <div class="nav-tab  d-flex justify-content-between flex-column h-100 p-4 ">
+
+            <div class="my-links">
+
+                <ul class="list-unstyled">
+                    <li class="mt-4"  onclick="closeSideNav()">Now playing </li>
+                    <li class="mt-4" onclick="getPopularMovies() ; closeSideNav()">Popular</li>
+                    <li class="mt-4" onclick="closeSideNav() ; getTopRatedMovies()">Top Rated</li>
+                    <li class="mt-4" onclick="closeSideNav();getTrendingMovies()">Trending</li>
+                    <li class="mt-4" onclick="closeSideNav() ; getUpcomingMovies()">Upcoming</li>
+                    <li class="mt-4"onclick="closeSideNav() ; scrollToContact()">Contact US</li>
+                </ul>
+
+            </div>
+
+
+
+
+            <div class="nav-footer">
+                <div class="icons mb-3">
+                    <i class="fa-brands fa-facebook-f mx-1 bg-black "></i>
+                    <i class="fa-brands fa-twitter mx-1 bg-black"></i>
+                    <i class="fa-solid fa-globe mx-1 bg-black"></i>
+                </div>
+                <div class="copyright ">
+                    <p>Copyright © 2022 All Rights
+                        <br>
+                     Reserved. 
+                     <br>
+                     created by <span class="text-danger p-2">Habiba Magdy</span>
+
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-header bg-white d-flex justify-content-between flex-column p-3  text-center  ">
+            <img class="logo-img mt-2" src="images/logo.png" alt="">
+            <i class="fa-solid open-close-icon fa-align-justify fa-large text-black"></i>
+            
+       
+             <div class="text-black">
+                <i class="fa-solid fa-globe "></i>
+                <br>
+                <i class="fa-solid fa-share-nodes"></i>
+             </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center p-5">
+        <div class="bar text-white w-50">
+            <input type="text" class="form-control bar rounded-5 bg-transparent text-white" id="text" placeholder="Search">
+        </div>
+    </div>
+    <div class="container">
+        <div id="data" class="row"></div>
+    </div>
+    <div class="container text-center  ">
+        <div class="row align-items-center p-md-5 gx-5  " id="data">
+
+           
+        </div>
+
+    </div>
+
+    <div class="container p-4" id="contact">
+        <h1 class="text-white">Contact us</h1>
+        <div class="row g-4 justify-content-center align-items-center">
+            <div class="col-md-6 text-center">
+                <input id="nameInput" type="text" class="form-control text-white test" placeholder="Enter your Name" required>
+                <div id="nameError" class="error-message text-danger"></div>
+            </div>
+    
+            <div class="col-md-6">
+                <input id="emailInput"  class="form-control text-white test" placeholder="Enter your Email" required>
+                <div id="emailError" class="error-message"></div>
+            </div>
+    
+            <div class="col-md-6">
+                <input id="phoneInput" class="form-control text-white test" placeholder="Enter Your Phone" required>
+                <div id="phoneError" class="error-message text-danger"></div>
+            </div>
+    
+            <div class="col-md-6">
+                <input id="ageInput"  class="form-control text-white test" placeholder="Enter Your Age" required>
+                <div id="ageError" class="error-message text-danger"></div>
+            </div>
+    
+            <div class="col-md-6">
+                <input id="passInput" type="password" class="form-control text-white test" placeholder="Enter Your Password" required>
+                <div id="passError" class="error-message text-danger"></div>
+            </div>
+    
+            <div class="col-md-6">
+                <input id="pass2Input" type="password" class="form-control text-white test" placeholder="Re-enter Your Password" required>
+                <div id="pass2Error" class="error-message text-danger"></div>
+            </div>
+    
+            <div class="col-md-12 ">
+                <button class="button" onclick="validateForm()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/index.js"></script>
+</body>
+</html>
